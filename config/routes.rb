@@ -2,6 +2,7 @@ GameTracker::Application.routes.draw do
 
   resources :users
   resources :games
+  resources :genres
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
