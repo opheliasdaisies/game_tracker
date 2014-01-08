@@ -7,6 +7,10 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <h1>Game Tracker</h1>
+  <%= link_to "Games", games_path %>
+  <%= link_to "Gamers", users_path %>
+  <%= link_to "Genres", genres_path %>
 
 <%= yield %>
 
