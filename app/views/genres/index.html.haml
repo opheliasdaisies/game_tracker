@@ -1,0 +1,16 @@
+%h1 Genre List
+
+%table
+  %tr
+    %th Name
+    %th
+    %th
+    %th
+
+    - @genres.each do |genre|
+      %tr
+        %td= genre.name
+        %td= genre.handle
+        %td= link_to 'View Profile', genre
+        %td= link_to 'Edit Profile', edit_genre_path(genre)
+        %td= link_to 'Delete Genre', genre, :method => 'delete', :data => {:confirm => "Are you sure?"}
