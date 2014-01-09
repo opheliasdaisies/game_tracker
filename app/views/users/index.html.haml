@@ -10,7 +10,7 @@
 
     - @users.each do |user|
       %tr
-        %td= user.name
+        %td= user.username
         %td= user.handle
         %td= link_to 'View Profile', user
         %td= link_to 'Edit Profile', edit_user_path(user)
