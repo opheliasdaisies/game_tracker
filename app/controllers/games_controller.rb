@@ -4,4 +4,17 @@ class GamesController < ApplicationController
     @games = Game.all
   end
 
+  def new
+    @game = Game.new
+  end
+
+  def create
+    @game = Game.new(params[:game])
+    if @game.save
+      redirect_to @game
+    else
+      render new
+    end
+  end
+
 end
